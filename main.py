@@ -5,10 +5,12 @@ students = []
 def add_student():
     name = input("Enter student name: ")
     marks = float(input("Enter marks: "))
+    branch= input("Enter branch: ")
 
     student = {
         "name": name,
-        "marks": marks
+        "marks": marks,
+        "branch": branch
     }
 
     students.append(student)
@@ -21,7 +23,7 @@ def show_students():
         return
 
     for student in students:
-        print(student["name"], "-", student["marks"])
+        print(student["name"], "-", student["marks"], "-", student["branch"])
 
 
 def show_average():
